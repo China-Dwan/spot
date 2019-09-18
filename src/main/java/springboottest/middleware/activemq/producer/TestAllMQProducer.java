@@ -3,7 +3,7 @@ package springboottest.middleware.activemq.producer;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
-import springboottest.utils.MQUtil;
+import springboottest.middleware.activemq.MQUtil;
 
 import javax.annotation.Resource;
 

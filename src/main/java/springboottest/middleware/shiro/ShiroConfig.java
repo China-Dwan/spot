@@ -1,4 +1,4 @@
-package springboottest.shiro;
+package springboottest.middleware.shiro;
 
 import org.apache.shiro.codec.Base64;
 import org.apache.shiro.mgt.SecurityManager;

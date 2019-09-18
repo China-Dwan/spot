@@ -2,7 +2,7 @@ package springboottest.middleware.activemq.consumer;
 
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
-import springboottest.constants.ActiveMQConstant;
+import springboottest.middleware.activemq.ActiveMQConstant;
 
 import java.time.LocalTime;
 

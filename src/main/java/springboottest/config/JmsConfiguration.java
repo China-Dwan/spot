@@ -10,7 +10,7 @@ import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.scheduling.annotation.EnableAsync;
-import springboottest.constants.ActiveMQConstant;
+import springboottest.middleware.activemq.ActiveMQConstant;
 
 import javax.jms.Queue;
 

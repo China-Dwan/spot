@@ -1,4 +1,4 @@
-package springboottest.es;
+package springboottest.middleware.es;
 
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -6,7 +6,7 @@ import org.elasticsearch.index.query.QueryStringQueryBuilder;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import springboottest.es.pojo.Book;
+import springboottest.middleware.es.pojo.Book;
 
 import javax.annotation.Resource;
 

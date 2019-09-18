@@ -1,4 +1,4 @@
-package springboottest.shiro;
+package springboottest.middleware.shiro;
 
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.SessionListener;

@@ -1,7 +1,7 @@
-package springboottest.es;
+package springboottest.middleware.es;
 
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
-import springboottest.es.pojo.Book;
+import springboottest.middleware.es.pojo.Book;
 
 public interface EsRepository extends ElasticsearchRepository<Book,String> {
 }

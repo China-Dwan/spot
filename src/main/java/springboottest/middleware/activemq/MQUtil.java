@@ -1,4 +1,4 @@
-package springboottest.utils;
+package springboottest.middleware.activemq;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.activemq.ScheduledMessage;
