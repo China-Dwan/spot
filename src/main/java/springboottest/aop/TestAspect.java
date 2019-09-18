@@ -17,6 +17,7 @@ import java.util.Map;
 @Component
 public class TestAspect {
 
+    //定义切点
     @Pointcut("@annotation(springboottest.aop.Sout)")
     public void testCon() {
     }
