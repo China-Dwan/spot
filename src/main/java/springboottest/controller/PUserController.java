@@ -2,6 +2,7 @@ package springboottest.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import springboottest.aop.Sout;
 import springboottest.mapper.PUserMapper;
@@ -61,6 +62,12 @@ public class PUserController {
     @Sout(s1 = "a",s2 = "aa")
     public void testCut() {
         System.out.println("执行方法");
+    }
+
+    @RequestMapping("/ss")
+    public String ss(Model model) {
+
+        return "/ss";
     }
 
 }

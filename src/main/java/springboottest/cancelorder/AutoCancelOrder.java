@@ -33,7 +33,7 @@ public class AutoCancelOrder {
         //读取redis中的遗留业务
         Map<String,Object> cacheData = redisTemplate.opsForHash().entries(redisKey);
         cacheData.keySet().forEach(key -> {
-            OrderDelayedVO order = (OrderDelayedVO) cacheData.get(key);
+            OrderDelayedVO order = JSON.parseObject((String) cacheData.get(key),OrderDelayedVO.class);
             if (order == null) {
                 return;
             }
