@@ -1,4 +1,4 @@
-package springboottest.aop;
+package springboottest.business.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
@@ -17,10 +17,18 @@ import java.util.Map;
 @Component
 public class TestAspect {
 
-    //定义切点
-    @Pointcut("@annotation(springboottest.aop.Sout)")
+    /**
+     * 定义切点
+     */
+    @Pointcut("@annotation(springboottest.business.aop.Sout)")
     public void testCon() {
     }
+
+
+    @Pointcut("@annotation(springboottest.business.aop.Sout2)")
+    public void testCon2() {
+    }
+
 
     @Before("testCon()")
     public void doBefore(JoinPoint joinPoint) throws Exception {
@@ -31,6 +39,11 @@ public class TestAspect {
     @After("testCon()")
     public void doAfter(JoinPoint joinPoint) {
         System.out.println("after");
+    }
+
+    @Before("testCon2()")
+    public void doBefore2() {
+        System.out.println("前切");
     }
 
 

@@ -1,10 +1,9 @@
-package springboottest.utils;
+package springboottest.business.poi;
 
 import lombok.extern.slf4j.Slf4j;
 import net.sf.jxls.transformer.XLSTransformer;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.poi.hssf.usermodel.*;
-import springboottest.annotation.Export;
 
 import java.beans.PropertyDescriptor;
 import java.io.File;
@@ -16,6 +15,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Slf4j
+@Deprecated
 public class ExportExcelUtil {
 
     /**

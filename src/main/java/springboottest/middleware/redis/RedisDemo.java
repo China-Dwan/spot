@@ -17,11 +17,19 @@ public class RedisDemo {
 
     @RequestMapping("/demo")
     public void test() {
-        this.testString();
-        this.testHash();
-        this.testList();
-        this.testSet();
-        this.testZSet();
+//        this.testString();
+//        this.testHash();
+//        this.testList();
+//        this.testSet();
+//        this.testZSet();
+        testStringss();
+    }
+
+    private void testStringss() {
+        redisTemplate.opsForValue().set("1002","1002");
+        int num = Integer.valueOf((String) redisTemplate.opsForValue().get("1002"));
+
+        System.out.println(num);
     }
 
     private void testZSet() {

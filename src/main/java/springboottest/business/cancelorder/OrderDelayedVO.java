@@ -1,4 +1,4 @@
-package springboottest.cancelorder;
+package springboottest.business.cancelorder;
 
 import lombok.Data;
 import org.apache.commons.lang3.math.NumberUtils;

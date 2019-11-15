@@ -4,7 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import springboottest.aop.Sout;
+import springboottest.business.aop.Sout;
+import springboottest.business.aop.Sout2;
 import springboottest.mapper.PUserMapper;
 import springboottest.pojo.PUser;
 import springboottest.service.PUserService;
@@ -13,7 +14,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/guest/users")
@@ -61,6 +61,12 @@ public class PUserController {
     @RequestMapping("/getCut")
     @Sout(s1 = "a",s2 = "aa")
     public void testCut() {
+        System.out.println("执行方法");
+    }
+
+    @RequestMapping("/getCut2")
+    @Sout2(s = "a")
+    public void testCut2() {
         System.out.println("执行方法");
     }
 

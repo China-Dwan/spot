@@ -3,7 +3,6 @@ package springboottest.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springboottest.mapper.ExportMapper;
-import springboottest.utils.ExportExcelUtil;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
