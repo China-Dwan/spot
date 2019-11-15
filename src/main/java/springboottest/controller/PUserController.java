@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/guest/users")
+//@RequestMapping("/guest/users")
 @Slf4j
 public class PUserController {
 
