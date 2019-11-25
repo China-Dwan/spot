@@ -1,9 +1,14 @@
-package springboottest.utils;
+package springboottest.business.importexcel;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.util.WebUtils;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
@@ -13,6 +18,19 @@ import java.util.List;
 
 @Slf4j
 public class ImportExcelUtil {
+
+    public static synchronized void importExcel(HttpServletRequest request) {
+        //校验文件
+        if (!ServletFileUpload.isMultipartContent(request)) {
+            System.out.println("文件有错误！");
+        }
+
+        MultipartHttpServletRequest multipartRequest = WebUtils.getNativeRequest(request, MultipartHttpServletRequest.class);
+        MultipartFile files = multipartRequest.getFile("file");
+//        readExcelTitle(files.getInputStream(),new VO());
+    }
+
+
 
     /**
      * 根据Excel表头读取内容
