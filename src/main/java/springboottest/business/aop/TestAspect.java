@@ -51,7 +51,6 @@ public class TestAspect {
     public static Map<String,String> getAnno(JoinPoint joinPoint) throws Exception {
         HashMap<String, String> map = new HashMap<>();
 
-
         //获取切点的信息
         Signature signature = joinPoint.getSignature();
         MethodSignature methodSignature = (MethodSignature) signature;
@@ -59,26 +58,6 @@ public class TestAspect {
         Sout sout = (Sout) method.getAnnotation(Sout.class);
         map.put("s1",sout.s1());
         map.put("s2",sout.s2());
-
-
-
-
-
-
-//        String targetName = joinPoint.getTarget().getClass().getName();
-//        String methodName = joinPoint.getSignature().getName();
-//        Object[] args = joinPoint.getArgs();
-//        Class targetClass = Class.forName(targetName);
-//        Method[] methods = targetClass.getMethods();
-//
-//        for (Method method : methods) {
-//            if (method.getName().equals(methodName)) {
-//                Sout annotation = method.getAnnotation(Sout.class);
-//                map.put("s1",annotation.s1());
-//                map.put("s2",annotation.s2());
-//                break;
-//            }
-//        }
 
         return map;
     }

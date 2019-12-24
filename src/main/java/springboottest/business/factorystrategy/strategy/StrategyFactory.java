@@ -6,6 +6,7 @@ import springboottest.business.factorystrategy.strategytype.BVIP;
 import springboottest.business.factorystrategy.strategytype.DisCount;
 import springboottest.business.factorystrategy.strategytype.NOVIP;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.util.HashMap;
 
@@ -22,7 +23,8 @@ public class StrategyFactory {
 
     private static StrategyFactory factory = new StrategyFactory();
 
-    private StrategyFactory() {
+    @PostConstruct
+    private void StrategyFactory() {
         strategyMap.put(StrategyTypeEnum.AVIP.type(), avip);
         strategyMap.put(StrategyTypeEnum.BVIP.type(), bvip);
         strategyMap.put(StrategyTypeEnum.NOVIP.type(), novip);
