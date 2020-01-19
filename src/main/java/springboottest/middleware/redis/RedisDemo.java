@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/guest/redis")
@@ -23,6 +24,14 @@ public class RedisDemo {
 //        this.testSet();
 //        this.testZSet();
         testStringss();
+    }
+
+    /**
+     * 防止连点
+     */
+    private void testDoubleClick() {
+        Boolean flag = redisTemplate.opsForValue().setIfAbsent("DOUBLE_CHECK", 1, 20, TimeUnit.SECONDS);
+        System.out.println(flag);
     }
 
     private void testStringss() {
@@ -51,7 +60,9 @@ public class RedisDemo {
         System.out.println(members);
     }
 
-    // key value[]
+    /**
+     * key value[]
+     */
     private void testList() {
         ListOperations listOperations = redisTemplate.opsForList();
         for (int i = 0; i < 10; i++) {
@@ -62,7 +73,9 @@ public class RedisDemo {
         }
     }
 
-    // key = [{key,value},{key,value}]
+    /**
+     * key = [{key,value},{key,value}]
+     */
     private void testHash() {
         for (int i = 0; i < 10; i++) {
             HashOperations hashOperations = redisTemplate.opsForHash();
@@ -73,8 +86,9 @@ public class RedisDemo {
         }
     }
 
-    // {key,value}
-    //
+    /**
+     * {key,value}
+     */
     private void testString() {
         for (int i = 0; i < 10; i++) {
             redisTemplate.opsForValue().set("2",i);

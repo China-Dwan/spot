@@ -1,20 +1,21 @@
 package springboottest.middleware.es;
 
-import org.elasticsearch.index.query.BoolQueryBuilder;
-import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.index.query.QueryStringQueryBuilder;
+import org.elasticsearch.index.query.*;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springboottest.middleware.es.pojo.Book;
+import springboottest.middleware.es.service.BookRepository;
 
 import javax.annotation.Resource;
+import java.util.Iterator;
 
 @RestController
 @RequestMapping("/guest/es")
 public class ESController {
     @Resource
-    private EsRepository esRepository;
+    private BookRepository bookRepository;
 
     @RequestMapping("/add")
     public void add() {
@@ -23,22 +24,25 @@ public class ESController {
         book.setAuthor("1");
         book.setName("11");
 
-        Book save = esRepository.save(book);
+        Book save = bookRepository.save(book);
         System.out.println(save);
     }
 
     @RequestMapping("/get")
     public void get() {
-        BoolQueryBuilder builder = QueryBuilders.boolQuery();
+        BoolQueryBuilder query = QueryBuilders.boolQuery()
+                .must(QueryBuilders.termQuery("name", "11"))
+                .must(QueryBuilders.termQuery("author", "10"));
+        Iterable<Book> search = bookRepository.search(query);
+        Iterator<Book> iterator = search.iterator();
+        while (iterator.hasNext()) {
+            Book temp = iterator.next();
+            System.out.println(temp);
+        }
+    }
 
-        //
-        builder.should(QueryBuilders.matchPhrasePrefixQuery("text","11"));
-
-        //设置查询的含有关键字
-        builder.should(new QueryStringQueryBuilder("id").field(""));
-
-        //设置分页,第一页开始,一页显示10条
-        PageRequest page = new PageRequest(0, 10);
+    @RequestMapping("/page")
+    public void page() {
 
     }
 }
