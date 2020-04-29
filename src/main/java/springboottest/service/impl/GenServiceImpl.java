@@ -54,11 +54,11 @@ public class GenServiceImpl implements GenService {
         templates.add("template/Service.java.vm");
         templates.add("template/ServiceImpl.java.vm");
         templates.add("template/Controller.java.vm");
-        templates.add("template/menu.sql.vm");
 
-        templates.add("template/index.vue.vm");
-        templates.add("template/api.js.vm");
-        templates.add("template/crud.js.vm");
+//        templates.add("template/menu.sql.vm");
+//        templates.add("template/index.vue.vm");
+//        templates.add("template/api.js.vm");
+//        templates.add("template/crud.js.vm");
         return templates;
     }
 
