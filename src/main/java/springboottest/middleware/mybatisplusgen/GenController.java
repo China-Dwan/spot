@@ -5,7 +5,7 @@ import lombok.SneakyThrows;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import springboottest.service.GenService;
+import springboottest.service.gen.GenService;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;

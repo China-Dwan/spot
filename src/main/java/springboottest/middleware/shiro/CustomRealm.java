@@ -9,7 +9,6 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import springboottest.pojo.PUser;
-import springboottest.service.PUserService;
 
 import javax.annotation.Resource;
 import java.util.HashSet;
@@ -18,8 +17,8 @@ import java.util.Set;
 @Slf4j
 public class CustomRealm extends AuthorizingRealm {
 
-    @Resource
-    private PUserService pUserService;
+//    @Resource
+//    private PUserService pUserService;
 
 
     /**
@@ -30,7 +29,7 @@ public class CustomRealm extends AuthorizingRealm {
         PUser pUser = (PUser) getAvailablePrincipal(principalCollection);
 
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
-        pUser = pUserService.findByUsername(pUser.getUsername());
+        //pUser = pUserService.findByUsername(pUser.getUsername());
         Set<String> roleSet = new HashSet<>();
         Set<String> permissionSet = new HashSet<>();
 
@@ -55,7 +54,9 @@ public class CustomRealm extends AuthorizingRealm {
 
         if (StringUtils.isEmpty(username))
             throw new AccountException("Null username are not allowed");
-        PUser pUser = pUserService.findByUsername(username);
+
+//        PUser pUser = pUserService.findByUsername(username);
+        PUser pUser = new PUser();
         if (pUser == null)
             throw new AccountException("No account for nickname " + username);
 

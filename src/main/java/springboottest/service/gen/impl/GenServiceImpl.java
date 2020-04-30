@@ -1,4 +1,4 @@
-package springboottest.service.impl;
+package springboottest.service.gen.impl;
 
 import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.util.CharsetUtil;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import springboottest.mapper.GenMapper;
 import springboottest.middleware.mybatisplusgen.pojo.ColumnEntity;
 import springboottest.middleware.mybatisplusgen.pojo.TableEntity;
-import springboottest.service.GenService;
+import springboottest.service.gen.GenService;
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
