@@ -38,7 +38,7 @@
         <result property="createTime" column="create_time"/>
         <result property="createAdminId" column="create_admin_id"/>
         <result property="status" column="status"/>
-        <result property="updateTime" column="update_time"/>
+        <!--<result property="updateTime" column="update_time"/>-->
         <result property="updateAdminId" column="update_admin_id"/>
   </resultMap>
 </mapper>

@@ -4,24 +4,17 @@
     <list default="true" id="7f946e37-82b8-4269-b139-a20b32d693d4" name="Default Changelist" comment="new">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/business/exportpdf/PDFController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboottest/business/exportpdf/PDFController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/controller/ExportController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/controller/PUserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/middleware/mybatisplusgen/GenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboottest/middleware/mybatisplusgen/GenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/middleware/shiro/CustomRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboottest/middleware/shiro/CustomRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/service/GenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboottest/service/gen/GenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/service/PUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/service/impl/GenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboottest/service/gen/impl/GenServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/service/impl/PUserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/business/exportpdf/PDFController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springboottest/business/exportpdf/PDFController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/controller/ExportController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/controller/PUserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/middleware/shiro/CustomRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springboottest/middleware/shiro/CustomRealm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/service/PUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/service/impl/PUserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/config/ESRestClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboottest/config/ESRestClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/esrepository/ShopAdminRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/middleware/es/ESController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/middleware/es/pojo/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/middleware/es/service/BookRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/pojo/es/ShopAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboottest/pojo/es/ShopAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboottest/service/es/impl/ForESServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboottest/service/es/impl/ForESServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/springboottest/mapper/es/ShopAdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springboottest/mapper/es/ShopAdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/config/ESRestClientConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springboottest/config/ESRestClientConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/middleware/es/ESController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/middleware/es/pojo/Book.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +51,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response33.json" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response85.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -133,6 +126,26 @@
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8990" />
+          <option name="urlPath" value="/guest/fores/select" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8990" />
           <option name="urlPath" value="/guest/fores/in" />
           <option name="headers">
             <list>
@@ -173,7 +186,7 @@
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8990" />
-          <option name="urlPath" value="/guest/fores/select" />
+          <option name="urlPath" value="/guest/fores/delete" />
           <option name="headers">
             <list>
               <KeyValuePair>
@@ -380,7 +393,7 @@
       <workItem from="1578398249390" duration="1009000" />
       <workItem from="1579251077513" duration="3245000" />
       <workItem from="1579417059268" duration="7859000" />
-      <workItem from="1588142693362" duration="24596000" />
+      <workItem from="1588142693362" duration="43133000" />
     </task>
     <task id="LOCAL-00001" summary="30分钟取消订单  redis + delayedQueue">
       <created>1568789687934</created>
@@ -473,62 +486,62 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="438" y="124" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588151213795" />
-    <state width="427" height="466" key="DebuggerActiveHint" timestamp="1588234510513">
+    <state width="809" height="466" key="DebuggerActiveHint" timestamp="1588750379538">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="427" height="466" key="DebuggerActiveHint/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588234510513" />
+    <state width="809" height="466" key="DebuggerActiveHint/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588750379538" />
     <state x="494" y="271" key="FileChooserDialogImpl" timestamp="1588214929601">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="494" y="271" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588214929601" />
-    <state width="1877" height="495" key="GridCell.Tab.0.bottom" timestamp="1588235731616">
+    <state width="1877" height="336" key="GridCell.Tab.0.bottom" timestamp="1588752199841">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731616" />
-    <state width="1877" height="495" key="GridCell.Tab.0.center" timestamp="1588235731616">
+    <state width="1877" height="336" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199841" />
+    <state width="1877" height="336" key="GridCell.Tab.0.center" timestamp="1588752199841">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731616" />
-    <state width="1877" height="495" key="GridCell.Tab.0.left" timestamp="1588235731616">
+    <state width="1877" height="336" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199841" />
+    <state width="1877" height="336" key="GridCell.Tab.0.left" timestamp="1588752199840">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731616" />
-    <state width="1877" height="495" key="GridCell.Tab.0.right" timestamp="1588235731616">
+    <state width="1877" height="336" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199840" />
+    <state width="1877" height="336" key="GridCell.Tab.0.right" timestamp="1588752199841">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731616" />
-    <state width="1877" height="495" key="GridCell.Tab.1.bottom" timestamp="1588235731617">
+    <state width="1877" height="336" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199841" />
+    <state width="1877" height="336" key="GridCell.Tab.1.bottom" timestamp="1588752199841">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731617" />
-    <state width="1877" height="495" key="GridCell.Tab.1.center" timestamp="1588235731617">
+    <state width="1877" height="336" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199841" />
+    <state width="1877" height="336" key="GridCell.Tab.1.center" timestamp="1588752199841">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731617" />
-    <state width="1877" height="495" key="GridCell.Tab.1.left" timestamp="1588235731617">
+    <state width="1877" height="336" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199841" />
+    <state width="1877" height="336" key="GridCell.Tab.1.left" timestamp="1588752199841">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731617" />
-    <state width="1877" height="495" key="GridCell.Tab.1.right" timestamp="1588235731617">
+    <state width="1877" height="336" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199841" />
+    <state width="1877" height="336" key="GridCell.Tab.1.right" timestamp="1588752199841">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731617" />
-    <state width="1877" height="495" key="GridCell.Tab.2.bottom" timestamp="1588235731617">
+    <state width="1877" height="336" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199841" />
+    <state width="1877" height="336" key="GridCell.Tab.2.bottom" timestamp="1588752199841">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.2.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731617" />
-    <state width="1877" height="495" key="GridCell.Tab.2.center" timestamp="1588235731617">
+    <state width="1877" height="336" key="GridCell.Tab.2.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199841" />
+    <state width="1877" height="336" key="GridCell.Tab.2.center" timestamp="1588752199841">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.2.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731617" />
-    <state width="1877" height="495" key="GridCell.Tab.2.left" timestamp="1588235731617">
+    <state width="1877" height="336" key="GridCell.Tab.2.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199841" />
+    <state width="1877" height="336" key="GridCell.Tab.2.left" timestamp="1588752199841">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.2.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731617" />
-    <state width="1877" height="495" key="GridCell.Tab.2.right" timestamp="1588235731617">
+    <state width="1877" height="336" key="GridCell.Tab.2.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199841" />
+    <state width="1877" height="336" key="GridCell.Tab.2.right" timestamp="1588752199841">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.2.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588235731617" />
+    <state width="1877" height="336" key="GridCell.Tab.2.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588752199841" />
     <state x="490" y="183" key="Maven.ArtifactSearchDialog" timestamp="1588214343871">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -541,6 +554,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="261" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588151135048" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1588745869474">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588745869474" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -566,24 +583,14 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/springboottest/controller/es/ForESController.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/springboottest/service/es/impl/ForESServiceImpl.java</url>
           <line>37</line>
-          <option name="timeStamp" value="14" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/springboottest/service/es/impl/ForESServiceImpl.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/springboottest/service/es/impl/ForESServiceImpl.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="16" />
+          <line>64</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

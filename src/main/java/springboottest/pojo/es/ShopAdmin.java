@@ -19,14 +19,8 @@ package springboottest.pojo.es;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
@@ -38,7 +32,6 @@ import java.time.LocalDateTime;
  */
 @Data
 @TableName("shop_admin")
-@Document(indexName = "data1", type = "shopadmintable")
 public class ShopAdmin {
     private static final long serialVersionUID = 1L;
 
@@ -91,9 +84,6 @@ public class ShopAdmin {
     /**
      * 账号创建时间
      */
-    @DateTimeFormat(pattern = "yyyy-MM-ddTHH:mm:ss.SSS")
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime createTime;
     /**
      * 账号创建管理员id
@@ -103,13 +93,12 @@ public class ShopAdmin {
      * 账号状态{0:不可用  ,  1:可用}
      */
     private Integer status;
+
     /**
      * 账号更新时间
      */
-    @DateTimeFormat(pattern = "yyyy-MM-ddTHH:mm:ss.SSS")
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime updateTime;
+
     /**
      * 账号更新管理员id
      */
