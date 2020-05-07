@@ -2,9 +2,7 @@ package springboottest.service.es.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import org.elasticsearch.ElasticsearchException;
 import org.elasticsearch.action.DocWriteResponse;
-import org.elasticsearch.action.admin.indices.create.CreateIndexRequest;
 import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.index.IndexRequest;
@@ -12,9 +10,6 @@ import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.xcontent.XContentType;
-import org.elasticsearch.index.query.BoolQueryBuilder;
-import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.rest.RestStatus;
 import org.springframework.stereotype.Service;
 import springboottest.config.ESRestClientConfig;
 import springboottest.mapper.es.ShopAdminMapper;
@@ -83,6 +78,15 @@ public class ForESServiceImpl implements ForESService {
 
     @Override
     public void delete() {
+    }
+
+
+    @Override
+    public void multSelect() {
+        RestHighLevelClient client = ESRestClientConfig.getClient();
+
+
+        closeClient(client);
     }
 
 

@@ -6,4 +6,6 @@ public interface ForESService {
     void select();
 
     void delete();
+
+    void multSelect();
 }

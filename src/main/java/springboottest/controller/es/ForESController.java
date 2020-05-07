@@ -29,6 +29,11 @@ public class ForESController {
         forESService.select();
     }
 
+    @RequestMapping("/multselect")
+    public void multSelect() {
+        forESService.multSelect();
+    }
+
     /**
      * 删除es
      */
