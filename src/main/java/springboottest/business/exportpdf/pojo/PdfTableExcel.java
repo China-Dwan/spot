@@ -1,15 +1,14 @@
-package springboottest.business.exportpdf;
+package springboottest.business.exportpdf.pojo;
 
 import com.itextpdf.text.Font;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.format.CellNumberFormatter;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
+import springboottest.business.exportpdf.utils.POIUtil;
 
 import java.io.IOException;
 import java.net.MalformedURLException;

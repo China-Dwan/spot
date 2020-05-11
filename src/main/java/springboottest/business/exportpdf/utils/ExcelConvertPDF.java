@@ -1,7 +1,9 @@
-package springboottest.business.exportpdf;
+package springboottest.business.exportpdf.utils;
 
 import com.itextpdf.text.RectangleReadOnly;
 import org.apache.poi.ss.usermodel.Workbook;
+import springboottest.business.exportpdf.pojo.Excel2Pdf;
+import springboottest.business.exportpdf.pojo.ExcelObject;
 
 import java.io.IOException;
 import java.io.OutputStream;

@@ -1,4 +1,4 @@
-package springboottest.business.exportpdf;
+package springboottest.business.exportpdf.pojo;
 
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Rectangle;
@@ -53,7 +53,7 @@ public class ExcelObject {
         this.excel = excel;
     }
 
-    Excel getExcel() {
+    public Excel getExcel() {
         return excel;
     }
 
