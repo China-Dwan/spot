@@ -112,8 +112,7 @@ public class AutoCancelOrder {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            //是否需要补偿数据?
-
+            //这里做一个短信通知预警
         } finally {
             //删除锁
             redisTemplate.delete(lockKey);
@@ -126,5 +125,9 @@ public class AutoCancelOrder {
      */
     private void updateOrder(OrderDelayedVO order) {
 
+    }
+
+    private void deleteOrderQueue(OrderDelayedVO order) {
+        delayedQueue.remove(order);
     }
 }

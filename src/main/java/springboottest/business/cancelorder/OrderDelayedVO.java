@@ -1,8 +1,8 @@
 package springboottest.business.cancelorder;
 
 import lombok.Data;
-import org.apache.commons.lang3.math.NumberUtils;
 
+import java.util.Objects;
 import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
 
@@ -10,9 +10,13 @@ import java.util.concurrent.TimeUnit;
 public class OrderDelayedVO implements Delayed {
 
     private String orderId;
-    private long startTime;
 
-    public OrderDelayedVO(String orderId, long startTime) {
+    /**
+     * 订单创建时间的时间戳
+     */
+    private Long startTime;
+
+    public OrderDelayedVO(String orderId, Long startTime) {
         this.orderId = orderId;
         this.startTime = startTime;
     }
@@ -21,42 +25,31 @@ public class OrderDelayedVO implements Delayed {
     public int compareTo(Delayed other) {
         if (other == this) {
             return 0;
-        }
-        if (other instanceof OrderDelayedVO) {
+        } else if (other instanceof OrderDelayedVO) {
             OrderDelayedVO otherRequest = (OrderDelayedVO) other;
             long otherStartTime = otherRequest.getStartTime();
             return (int) (this.startTime - otherStartTime);
+        } else {
+            return 0;
         }
-        return 0;
     }
 
     @Override
     public long getDelay(TimeUnit unit) {
-        return unit.convert(startTime - System.currentTimeMillis(), TimeUnit.MILLISECONDS);
+        return unit.convert(startTime, TimeUnit.MILLISECONDS) - unit.convert(System.currentTimeMillis(), TimeUnit.MILLISECONDS);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        OrderDelayedVO that = (OrderDelayedVO) o;
+        return startTime.equals(that.startTime) &&
+                orderId.equals(that.orderId);
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + (int) (NumberUtils.createInteger(orderId) ^ (NumberUtils.createInteger(orderId) >>> 32));
-        result = prime * result + (int) (startTime ^ (startTime >>> 32));
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        OrderDelayedVO other = (OrderDelayedVO) obj;
-        if (orderId != other.orderId)
-            return false;
-        if (startTime != other.startTime)
-            return false;
-        return true;
+        return Objects.hash(orderId, startTime);
     }
 }
