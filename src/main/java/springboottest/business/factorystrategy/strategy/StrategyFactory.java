@@ -31,11 +31,6 @@ public class StrategyFactory {
     }
 
     private static HashMap<String, DisCount> strategyMap = new HashMap<>();
-//    static {
-//        strategyMap.put(StrategyTypeEnum.AVIP.type(), new AVIP());
-//        strategyMap.put(StrategyTypeEnum.BVIP.type(), new BVIP());
-//        strategyMap.put(StrategyTypeEnum.NOVIP.type(), new NOVIP());
-//    }
 
     public DisCount creator(String value) {
         return strategyMap.get(value);
