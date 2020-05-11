@@ -140,7 +140,7 @@ public class ExportMultSheetExcelUtils {
         //第三步，创建单元格，并设置值表头 设置表头居中
         XSSFCellStyle style = wb.createCellStyle();
         //创建一个居中格式
-        style.setAlignment(XSSFCellStyle.ALIGN_CENTER);
+        //style.setAlignment(XSSFCellStyle.ALIGN_CENTER);
         //判断表头是否为空
         if (header != null) {
             for (int i = 0; i < header.length; i++) {

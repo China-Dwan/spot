@@ -93,7 +93,7 @@ public class ExportExcelUtil {
         //表头创建,并设置居中格式
         HSSFRow titleRow = sheet.createRow(0);
         HSSFCellStyle titleRowStyle = workbook.createCellStyle();
-        titleRowStyle.setAlignment(HSSFCellStyle.ALIGN_CENTER);
+        //titleRowStyle.setAlignment(HSSFCellStyle.ALIGN_CENTER);
         if (CollectionUtils.isNotEmpty(header)) {
             int i = 0;
             for (String title : header) {

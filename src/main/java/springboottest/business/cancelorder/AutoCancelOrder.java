@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -17,7 +18,7 @@ public class AutoCancelOrder {
     private final static String redisKey = "ORDER_AUTO_CANCEL_HASH";
 
     @Resource
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, String> redisTemplate;
 
     //保存需要取消的订单
     private final static DelayQueue<OrderDelayedVO> delayedQueue = new DelayQueue<>();
@@ -31,9 +32,9 @@ public class AutoCancelOrder {
         this.start();
 
         //读取redis中的遗留业务
-        Map<String,Object> cacheData = redisTemplate.opsForHash().entries(redisKey);
+        Map<Object, Object> cacheData = redisTemplate.opsForHash().entries(redisKey);
         cacheData.keySet().forEach(key -> {
-            OrderDelayedVO order = JSON.parseObject((String) cacheData.get(key),OrderDelayedVO.class);
+            OrderDelayedVO order = JSON.parseObject(cacheData.get(key).toString(), OrderDelayedVO.class);
             if (order == null) {
                 return;
             }
@@ -94,7 +95,9 @@ public class AutoCancelOrder {
         String lockKey = String.format("%s%s", redisKey, order.getOrderId());
 
         try {
-            if (redisTemplate.opsForValue().setIfAbsent(lockKey,order.getOrderId(),60l, TimeUnit.SECONDS)) {
+            //保证只有一个服务器处理订单业务
+            Boolean flag = redisTemplate.opsForValue().setIfAbsent(lockKey, order.getOrderId(), 60L, TimeUnit.SECONDS);
+            if (Objects.nonNull(flag) && flag) {
                 String orderJson = (String) redisTemplate.opsForHash().get(redisKey, order.getOrderId());
                 if (StringUtils.isNotEmpty(orderJson)) {
                     //此订单已经执行过取消订单操作
