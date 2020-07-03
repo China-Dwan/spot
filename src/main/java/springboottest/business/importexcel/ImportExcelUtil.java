@@ -2,10 +2,7 @@ package springboottest.business.importexcel;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.*;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.springframework.web.multipart.MultipartFile;
@@ -35,6 +32,11 @@ public class ImportExcelUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static void multipartFile(MultipartFile file) throws Exception {
+        Workbook workbook = WorkbookFactory.create(file.getInputStream());
+        readExcelTitle(workbook, new VO());
     }
 
     public static void httpFile(HttpServletRequest request) throws Exception {

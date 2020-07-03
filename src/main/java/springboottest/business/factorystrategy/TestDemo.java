@@ -19,7 +19,6 @@ public class TestDemo {
 
     public static void main(String[] args) {
         Context context = new Context();
-
         System.out.println(context.getPayPrice(1D, StrategyTypeEnum.AVIP.type()));
     }
 }
