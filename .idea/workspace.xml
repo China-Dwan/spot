@@ -4,7 +4,8 @@
     <list default="true" id="7f946e37-82b8-4269-b139-a20b32d693d4" name="Default Changelist" comment="new">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/thread/AMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/thread/AMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/thread/ThreadMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/thread/ThreadMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/thread/SynchronizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/thread/SynchronizedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/thread/VolatileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/thread/VolatileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +80,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.18506998" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -514,7 +515,7 @@
       <workItem from="1590394290465" duration="729000" />
       <workItem from="1591262966478" duration="860000" />
       <workItem from="1593506812132" duration="17000" />
-      <workItem from="1593691325050" duration="10121000" />
+      <workItem from="1593691325050" duration="13468000" />
     </task>
     <task id="LOCAL-00001" summary="30分钟取消订单  redis + delayedQueue">
       <created>1568789687934</created>
@@ -684,11 +685,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="490" y="183" key="Maven.ArtifactSearchDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588214343871" />
-    <state x="463" y="170" key="SettingsEditor" timestamp="1593764017316">
+    <state x="463" y="170" key="SettingsEditor" timestamp="1593764491056">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="463" y="170" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588755401832" />
-    <state x="463" y="170" key="SettingsEditor/1920.120.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1593764017316" />
+    <state x="463" y="170" key="SettingsEditor/1920.120.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1593764491056" />
     <state x="810" y="229" key="VCS.ChangeListViewerDialog" timestamp="1589168220525">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
