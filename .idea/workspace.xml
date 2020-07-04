@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f946e37-82b8-4269-b139-a20b32d693d4" name="Default Changelist" comment="new">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/thread/AMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/thread/AMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/thread/SynchronizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/thread/SynchronizedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/thread/VolatileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/thread/VolatileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spot.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/business/cancelorder/AutoCancelOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springboottest/business/cancelorder/AutoCancelOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/business/exportexcel/ExportMultSheetExcelUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springboottest/business/exportexcel/ExportMultSheetExcelUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/business/writefile/WriteFileToNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springboottest/business/writefile/WriteFileToNet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springboottest/utils/HttpRequestUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springboottest/utils/HttpRequestUtils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +50,16 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\work\mavenrepository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../maven/apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="D:\work\maven\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="localRepository" value="E:\worksoft\maven\repository" />
+        <option name="mavenHome" value="E:/worksoft/maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="E:\worksoft\maven\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1UYTgFSVUMeGHEvHZrv2Ikq83Rp" />
@@ -80,7 +91,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.18506998" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -405,9 +416,9 @@
       <item itemvalue="Application.NormalTest" />
       <item itemvalue="Application.TestDemo" />
       <item itemvalue="Application.GenController" />
+      <item itemvalue="Application.ThreadMethod" />
       <item itemvalue="Maven.generator" />
       <item itemvalue="Spring Boot.App" />
-      <item itemvalue="Application.ThreadMethod" />
     </list>
     <recent_temporary>
       <list>
@@ -516,6 +527,8 @@
       <workItem from="1591262966478" duration="860000" />
       <workItem from="1593506812132" duration="17000" />
       <workItem from="1593691325050" duration="13468000" />
+      <workItem from="1593838417786" duration="6419000" />
+      <workItem from="1593845485763" duration="349000" />
     </task>
     <task id="LOCAL-00001" summary="30分钟取消订单  redis + delayedQueue">
       <created>1568789687934</created>
@@ -592,6 +605,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="187" key="#Notifications/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588214945277" />
+    <state x="552" y="186" key="#Project_Structure" timestamp="1593839168931">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="186" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1593839168931" />
     <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589163980047">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -621,10 +638,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589787647164" />
-    <state x="494" y="271" key="FileChooserDialogImpl" timestamp="1589008055994">
+    <state x="494" y="271" key="FileChooserDialogImpl" timestamp="1593845004670">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="494" y="271" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589008055994" />
+    <state x="494" y="271" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1593845004670" />
     <state width="1877" height="328" key="GridCell.Tab.0.bottom" timestamp="1593763494714">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -685,10 +703,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="490" y="183" key="Maven.ArtifactSearchDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588214343871" />
-    <state x="463" y="170" key="SettingsEditor" timestamp="1593764491056">
+    <state x="474" y="136" key="SettingsEditor" timestamp="1593845201424">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="463" y="170" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588755401832" />
+    <state x="474" y="136" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1593845201424" />
     <state x="463" y="170" key="SettingsEditor/1920.120.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1593764491056" />
     <state x="810" y="229" key="VCS.ChangeListViewerDialog" timestamp="1589168220525">
       <screen x="0" y="0" width="1920" height="1050" />

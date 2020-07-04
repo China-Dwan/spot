@@ -18,6 +18,9 @@
     <version>2.1.10.RELEASE</version>
   </parent>
 
+
+
+
   <packaging>jar</packaging>
 
   <properties>
@@ -229,12 +232,12 @@
     <!-- pdf end -->
   </dependencies>
 
-  <!--<build>
+  <build>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
     </plugins>
-  </build>-->
+  </build>
 </project>
