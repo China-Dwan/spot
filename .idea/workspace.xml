@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f946e37-82b8-4269-b139-a20b32d693d4" name="Default Changelist" comment="new">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/thread/SynchronizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/thread/SynchronizedTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="7f946e37-82b8-4269-b139-a20b32d693d4" name="Default Changelist" comment="new" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -521,7 +516,7 @@
       <workItem from="1593930911557" duration="133000" />
       <workItem from="1593931057687" duration="87000" />
       <workItem from="1593931170440" duration="129000" />
-      <workItem from="1593931321134" duration="379000" />
+      <workItem from="1593931321134" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="30分钟取消订单  redis + delayedQueue">
       <created>1568789687934</created>
