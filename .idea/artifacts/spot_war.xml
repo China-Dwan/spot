@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="spot:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="spot-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="spot:war exploded" />
-    </root>
-  </artifact>
-</component>
