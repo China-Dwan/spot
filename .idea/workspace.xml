@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f946e37-82b8-4269-b139-a20b32d693d4" name="Default Changelist" comment="new">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/thread/AMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/thread/AMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/thread/SynchronizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/thread/SynchronizedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/thread/VolatileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/thread/VolatileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -405,9 +403,9 @@
       <item itemvalue="Application.NormalTest" />
       <item itemvalue="Application.TestDemo" />
       <item itemvalue="Application.GenController" />
+      <item itemvalue="Application.ThreadMethod" />
       <item itemvalue="Maven.generator" />
       <item itemvalue="Spring Boot.App" />
-      <item itemvalue="Application.ThreadMethod" />
     </list>
     <recent_temporary>
       <list>
@@ -515,7 +513,8 @@
       <workItem from="1590394290465" duration="729000" />
       <workItem from="1591262966478" duration="860000" />
       <workItem from="1593506812132" duration="17000" />
-      <workItem from="1593691325050" duration="13468000" />
+      <workItem from="1593691325050" duration="13509000" />
+      <workItem from="1593997244270" duration="237000" />
     </task>
     <task id="LOCAL-00001" summary="30分钟取消订单  redis + delayedQueue">
       <created>1568789687934</created>
@@ -702,10 +701,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="968" height="533" key="XDebugger.FullValuePopup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589012673588" />
-    <state x="640" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1589443382343">
+    <state x="640" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1593997334920">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="640" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589443382343" />
+    <state x="640" y="349" key="com.intellij.ide.util.TipDialog/1920.120.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1593997334920" />
     <state x="511" y="261" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1589165745386">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
