@@ -1,4 +1,10 @@
-target/
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+target
 *.iml
-.idea/
-*.log
+out
+gen
+/.idea/
