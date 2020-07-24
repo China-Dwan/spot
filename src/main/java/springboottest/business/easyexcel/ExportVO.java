@@ -15,9 +15,9 @@ public class ExportVO implements Serializable {
     private String column2;
 
     @ExcelProperty(value = "字段3", index = 2)
-    private String column3;
+    private Integer column3;
 
-    public ExportVO(String column1, String column2, String column3) {
+    public ExportVO(String column1, String column2, Integer column3) {
         this.column1 = column1;
         this.column2 = column2;
         this.column3 = column3;

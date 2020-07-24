@@ -3,6 +3,7 @@ package springboottest.business.easyexcel;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.write.metadata.WriteSheet;
+import com.alibaba.excel.write.metadata.fill.FillConfig;
 import org.springframework.core.io.ClassPathResource;
 
 import javax.servlet.http.HttpServletResponse;
@@ -22,7 +23,7 @@ public class EasyExcelExportUtil {
         HashMap<String, Object> map = new HashMap<>();
         List<ExportVO> list = new ArrayList<>();
         for (int i = 0; i < 10000; i++) {
-            list.add(new ExportVO(String.valueOf(i), String.valueOf(i), String.valueOf(i)));
+            list.add(new ExportVO(String.valueOf(i), String.valueOf(i), i));
         }
         map.put("list1", list);
         map.put("list2", list);
@@ -79,8 +80,10 @@ public class EasyExcelExportUtil {
             ExcelWriter excelWriter = EasyExcel.write(bos).withTemplate(in).build();
 
             WriteSheet sheetWriter = EasyExcel.writerSheet(0).build();
-            excelWriter.fill(map.get("data"), sheetWriter);
-            excelWriter.fill(map.get("list1"), sheetWriter);
+            // 这里在循环list的时候，都会重新创建新的一行，保持底部
+            FillConfig fillConfig = FillConfig.builder().forceNewRow(Boolean.TRUE).build();
+            excelWriter.fill(map.get("data"), fillConfig,sheetWriter);
+            excelWriter.fill(map.get("list1"), fillConfig, sheetWriter);
 
             sheetWriter = EasyExcel.writerSheet(1).build();
             excelWriter.fill(map.get("data"), sheetWriter);

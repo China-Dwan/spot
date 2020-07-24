@@ -16,7 +16,9 @@ import java.util.List;
  * @Date 下午11:47 2019/2/18
  */
 public class Excel2Pdf extends PdfTool {
-    //
+    /**
+     *
+     */
     protected List<ExcelObject> objects = new ArrayList<ExcelObject>();
 
     /**
@@ -89,13 +91,14 @@ public class Excel2Pdf extends PdfTool {
      */
     public void convert() throws DocumentException, MalformedURLException, IOException {
         // 若沒有設定 PDF 輸出紙張大小,預設為 A4 直式
-        if (pageSize == null)
+        if (pageSize == null) {
             pageSize = PageSize.A4.rotate();
+        }
         getDocument().setPageSize(pageSize);
 
         PdfWriter writer = PdfWriter.getInstance(getDocument(), os);
         writer.setPageSize(pageSize);
-        //index
+        // index
         if (autoPageNum) {
             writer.setPageEvent(new PDFPageEvent());
         }
