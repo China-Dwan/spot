@@ -121,11 +121,12 @@ public class ImportExcelUtil {
                 Cell cell = row.getCell(j);
                 try {
                     String property = "";
-                    switch (cell.getCellType()) {
-                        case Cell.CELL_TYPE_STRING:
+
+                    switch (cell.getCellTypeEnum()) {
+                        case STRING:
                             property = cell.getRichStringCellValue().getString();
                             break;
-                        case Cell.CELL_TYPE_NUMERIC:
+                        case NUMERIC:
                             if (HSSFDateUtil.isCellDateFormatted(cell)) {
                                 Date date = cell.getDateCellValue();
                                 property = dateFormat.format(date);
