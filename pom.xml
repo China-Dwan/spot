@@ -198,6 +198,14 @@
     </dependency>
     <!-- POI end -->
 
+    <!-- easy excel start -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>easyexcel</artifactId>
+      <version>2.1.6</version>
+    </dependency>
+    <!-- easy excel end -->
+
     <!-- shiro start -->
     <dependency>
       <groupId>org.apache.shiro</groupId>
@@ -234,9 +242,36 @@
 
   <build>
     <plugins>
+      <!-- fix excel template package error -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <configuration>
+          <nonFilteredFileExtensions>
+            <nonFilteredFileExtension>xls</nonFilteredFileExtension>
+            <nonFilteredFileExtension>xlsx</nonFilteredFileExtension>
+          </nonFilteredFileExtensions>
+        </configuration>
+      </plugin>
+
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+
+
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+
+        <configuration>
+          <!-- 指定该Main Class为全局的唯一入口 -->
+          <mainClass>springboottest.App</mainClass>
+          <layout>ZIP</layout>
+        </configuration>
       </plugin>
     </plugins>
   </build>
