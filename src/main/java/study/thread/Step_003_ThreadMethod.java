@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 测试thread的相关方法
  */
-public class ThreadMethod {
+public class Step_003_ThreadMethod {
 
 
     /**
@@ -117,7 +117,11 @@ public class ThreadMethod {
         JoinM m = new JoinM();
         Thread t1 = new Thread(m, "1");
         t1.start();
+
+        // 顺序执行
         t1.join();
-        new Thread(m, "2").start();
+
+        Thread t2 = new Thread(m, "2");
+        t2.start();
     }
 }

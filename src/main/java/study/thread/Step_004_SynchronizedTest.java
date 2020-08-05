@@ -1,6 +1,6 @@
 package study.thread;
 
-public class SynchronizedTest {
+public class Step_004_SynchronizedTest {
 
     /**
      * 使用场景

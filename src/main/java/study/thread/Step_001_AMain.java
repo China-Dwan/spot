@@ -1,6 +1,6 @@
 package study.thread;
 
-public class AMain {
+public class Step_001_AMain {
     /**
      * 什么是线程？什么是进程？
      * 一个程序未运行时，他是存放在硬盘上的，比如QQ.exe，在没有双击的时候，是什么都没有的；当双击exe时,一个程序运行起来后最少需要一个进程

@@ -3,7 +3,7 @@ package study.thread;
 /**
  * 线程状态
  */
-public class ThreadStatus {
+public class Step_002_ThreadStatus {
 
     /**
      * NEW
