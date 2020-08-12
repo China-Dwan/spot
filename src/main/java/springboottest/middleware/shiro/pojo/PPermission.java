@@ -1,4 +1,4 @@
-package springboottest.pojo;
+package springboottest.middleware.shiro.pojo;
 
 import lombok.Data;
 

@@ -19,7 +19,7 @@ package springboottest.service.es.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 import springboottest.mapper.es.ShopAdminMapper;
-import springboottest.pojo.es.ShopAdmin;
+import springboottest.middleware.es.ShopAdmin;
 import springboottest.service.es.ShopAdminService;
 
 /**

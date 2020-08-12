@@ -18,7 +18,7 @@
 package springboottest.mapper.es;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import springboottest.pojo.es.ShopAdmin;
+import springboottest.middleware.es.ShopAdmin;
 
 /**
  * 管理员表

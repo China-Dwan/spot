@@ -18,7 +18,7 @@
 package springboottest.service.es;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import springboottest.pojo.es.ShopAdmin;
+import springboottest.middleware.es.ShopAdmin;
 
 /**
  * 管理员表

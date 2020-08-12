@@ -23,7 +23,7 @@
 
 <mapper namespace="springboottest.mapper.es.ShopAdminMapper">
 
-  <resultMap id="shopAdminMap" type="springboottest.pojo.es.ShopAdmin">
+  <resultMap id="shopAdminMap" type="springboottest.middleware.es.ShopAdmin">
         <id property="adminId" column="admin_id"/>
         <result property="adminName" column="admin_name"/>
         <result property="adminPassword" column="admin_password"/>

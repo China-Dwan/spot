@@ -1,4 +1,4 @@
-package springboottest.controller.es;
+package springboottest.middleware.es;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;

@@ -13,7 +13,7 @@ import org.elasticsearch.common.xcontent.XContentType;
 import org.springframework.stereotype.Service;
 import springboottest.config.ESRestClientConfig;
 import springboottest.mapper.es.ShopAdminMapper;
-import springboottest.pojo.es.ShopAdmin;
+import springboottest.middleware.es.ShopAdmin;
 import springboottest.service.es.ForESService;
 
 import javax.annotation.Resource;
