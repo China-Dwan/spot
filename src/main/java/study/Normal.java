@@ -1,15 +1,26 @@
 package study;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.BeanFactory;
 
 import java.io.File;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Normal {
 
     public static void main(String[] args) {
-        File file = new File("e:\\apache-maven-3.6.3-bin.zip");
-        System.out.println(getDirSize(file));
+        JSONObject map = new JSONObject();
+        map.put("s1", "s1");
+        List<Integer> list = Arrays.asList(1, 2, 3);
+        map.put("s2", list);
+
+        JSONArray jsonArray = map.getJSONArray("s2");
+        List<Integer> s2 = jsonArray.toJavaList(Integer.class);
+        System.out.println(s2);
     }
 
     public static int getDirSize(File file) {

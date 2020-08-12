@@ -45,9 +45,7 @@ public class RedisConfiguration extends CachingConfigurerSupport {
     }
 
     /**
-     * retemplate相关配置
-     * @param factory
-     * @return
+     * redis template相关配置
      */
     @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
