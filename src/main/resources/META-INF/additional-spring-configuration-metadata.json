@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "admin.datasource.druid.testOnBorrow",
+      "type": "java.lang.String",
+      "description": "Description for admin.datasource.druid.testOnBorrow."
+    },
+    {
+      "name": "admin.datasource.druid.url",
+      "type": "java.lang.String",
+      "description": "Description for admin.datasource.druid.url."
+    }
+  ] }

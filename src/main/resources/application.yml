@@ -1,7 +1,66 @@
+server:
+  port: 8990
+
+spring:
+  activemq:
+    packages:
+      trust-all: true
+    broker-url: tcp://192.168.99.144:61616
+    user: admin
+    password: admin
+    # 是否为内存模式
+    in-memory: true
+    # 是否使用连接池，false时没发送一个消息，建立一次连接
+    pool:
+      enabled: false
+      max-connections: 5
+  jms:
+    cache:
+      enabled: true
+    # true=topic  false=queue
+    pub-sub-domain: false
+    listener:
+      acknowledge-mode: auto
+  redis:
+    host: 10.9.19.61
+    password: huaxin123
+    port: 6379
+    # redis共16片，使用0
+    database: 0
+    timeout: 5000ms
+    # springboot 2.X后版本支持lettuce，多线程安全
+    lettuce:
+      pool:
+        max-active: 4
+        max-wait: -1ms
+        max-idle: 4
+        min-idle: 0
+  data:
+    elasticsearch:
+      cluster-name: myes
+      cluster-nodes: 127.0.0.1:9300
+      repositories:
+        enabled: true
+
+logging:
+  level:
+    # 针对包设置打印日志等级
+    com: error
+  # 日志文件
+  file: e:\\sys.log
+  # 保存日志目录
+  path: /opt/sys
+  pattern:
+    # 格式化日志文件
+    console: '%d{yyyy-MM-dd-HH:mm} [%thread] %-5level %logger- %msg%n'
+    file: '%d{yyyy-MM-dd-HH:mm} [%thread] %-5level %logger- %msg%n'
+
+
 mybatis-plus:
   mapper-locations: classpath:mapper/**/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 
 admin:
   datasource:
@@ -17,3 +76,9 @@ admin:
       testWhileIdle: true
       testOnBorrow: true
       testOnReturn: true
+
+cookie:
+  remember:
+    me:
+      manager:
+        decode: 4AvVhmFLUs0KTA3Kprsdag==
