@@ -9,18 +9,17 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 public class Normal {
 
     public static void main(String[] args) {
-        JSONObject map = new JSONObject();
-        map.put("s1", "s1");
-        List<Integer> list = Arrays.asList(1, 2, 3);
-        map.put("s2", list);
+        System.out.println(getUUID());
+    }
 
-        JSONArray jsonArray = map.getJSONArray("s2");
-        List<Integer> s2 = jsonArray.toJavaList(Integer.class);
-        System.out.println(s2);
+    public static String getUUID(){
+        String uuid = UUID.randomUUID().toString().trim().replaceAll("-", "");
+        return uuid;
     }
 
     public static int getDirSize(File file) {

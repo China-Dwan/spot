@@ -27,12 +27,4 @@ public class GenController {
 
         IoUtil.write(response.getOutputStream(), Boolean.TRUE, data);
     }
-
-
-    public static void main(String[] args) {
-        char[] array = "123456789".toCharArray();
-        for (char c : array) {
-            System.out.println(c);
-        }
-    }
 }
