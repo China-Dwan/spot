@@ -47,7 +47,7 @@ logging:
     # 针对包设置打印日志等级
     com: error
   # 日志文件
-  file: e:\\sys.log
+  file: d:\\sys.log
   # 保存日志目录
   path: /opt/sys
   pattern:
@@ -67,7 +67,7 @@ admin:
     druid:
       url: jdbc:mysql://wodiancai.com:3306/car?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
       username: root
-      password: Yunxin@2019
+        password: Yunxin@2019
       driver-class-name: com.mysql.cj.jdbc.Driver
       initialSize: 5
       minIdle: 5

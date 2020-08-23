@@ -1,5 +1,6 @@
 package ${package}.${moduleName}.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -8,6 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author dzh
  * @date ${datetime}
  */
+@Mapper
 public interface ${className}Mapper extends BaseMapper<${className}> {
 
 }

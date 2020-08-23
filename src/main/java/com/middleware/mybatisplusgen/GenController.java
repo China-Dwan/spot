@@ -1,11 +1,11 @@
 package com.middleware.mybatisplusgen;
 
 import cn.hutool.core.io.IoUtil;
+import com.middleware.mybatisplusgen.service.GenService;
 import lombok.SneakyThrows;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.service.gen.GenService;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
