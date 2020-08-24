@@ -67,7 +67,7 @@ admin:
     druid:
       url: jdbc:mysql://wodiancai.com:3306/car?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
       username: root
-        password: Yunxin@2019
+      password: Yunxin@2019
       driver-class-name: com.mysql.cj.jdbc.Driver
       initialSize: 5
       minIdle: 5
