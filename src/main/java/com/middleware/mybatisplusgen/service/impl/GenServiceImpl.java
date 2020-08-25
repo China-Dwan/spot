@@ -170,9 +170,11 @@ public class GenServiceImpl implements GenService {
             tpl.merge(context, sw);
 
             //添加到zip
-            zip.putNextEntry(new ZipEntry(Objects
+            /*zip.putNextEntry(new ZipEntry(Objects
                     .requireNonNull(getFileName(template, tableEntity.getCaseClassName()
-                            , map.get("package").toString(), map.get("moduleName").toString()))));
+                            , map.get("package").toString(), map.get("moduleName").toString()))));*/
+            zip.putNextEntry(new ZipEntry(Objects
+                    .requireNonNull(getFileName1(template, tableEntity.getCaseClassName()))));
             IoUtil.write(zip, StandardCharsets.UTF_8, false, sw.toString());
             IoUtil.close(sw);
             zip.closeEntry();
@@ -216,6 +218,39 @@ public class GenServiceImpl implements GenService {
      */
     public String columnToJava(String columnName) {
         return WordUtils.capitalizeFully(columnName, new char[]{'_'}).replace("_", "");
+    }
+
+    /**
+     * 获取文件名
+     */
+    private String getFileName1(String template, String className) {
+        String packagePath = BACK_END_PROJECT + File.separator;
+
+        if (template.contains(ENTITY_JAVA_VM)) {
+            return packagePath + File.separator + className + ".java";
+        }
+
+        if (template.contains(MAPPER_JAVA_VM)) {
+            return packagePath + className + "Mapper.java";
+        }
+
+        if (template.contains(SERVICE_JAVA_VM)) {
+            return packagePath + className + "Service.java";
+        }
+
+        if (template.contains(SERVICE_IMPL_JAVA_VM)) {
+            return packagePath + className + "ServiceImpl.java";
+        }
+
+        if (template.contains(CONTROLLER_JAVA_VM)) {
+            return packagePath + className + "Controller.java";
+        }
+
+        if (template.contains(MAPPER_XML_VM)) {
+            return packagePath + className + "Mapper.xml";
+        }
+
+        return null;
     }
 
     /**
