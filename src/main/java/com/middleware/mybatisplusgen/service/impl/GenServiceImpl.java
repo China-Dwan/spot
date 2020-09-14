@@ -33,6 +33,8 @@ public class GenServiceImpl implements GenService {
 
     public final String CRUD_PREFIX = "export const tableOption =";
     private final String ENTITY_JAVA_VM = "Entity.java.vm";
+    private final String ENTITY_VO_JAVA_VM = "EntityVo.java.vm";
+    private final String ENTITY_QUERY_JAVA_VM = "QueryEntityParam.java.vm";
     private final String MAPPER_JAVA_VM = "Mapper.java.vm";
     private final String SERVICE_JAVA_VM = "Service.java.vm";
     private final String SERVICE_IMPL_JAVA_VM = "ServiceImpl.java.vm";
@@ -49,6 +51,8 @@ public class GenServiceImpl implements GenService {
     private List<String> getTemplates() {
         List<String> templates = new ArrayList<>();
         templates.add("template/Entity.java.vm");
+        templates.add("template/EntityVo.java.vm");
+        templates.add("template/QueryEntityParam.java.vm");
         templates.add("template/Mapper.java.vm");
         templates.add("template/Mapper.xml.vm");
         templates.add("template/Service.java.vm");
@@ -248,6 +252,14 @@ public class GenServiceImpl implements GenService {
 
         if (template.contains(MAPPER_XML_VM)) {
             return packagePath + className + "Mapper.xml";
+        }
+
+        if (template.contains(ENTITY_VO_JAVA_VM)) {
+            return packagePath + File.separator + className + "Vo.java";
+        }
+
+        if (template.contains(ENTITY_QUERY_JAVA_VM)) {
+            return packagePath + File.separator + "Query" + className + "Param.java";
         }
 
         return null;

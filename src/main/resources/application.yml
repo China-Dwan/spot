@@ -22,8 +22,8 @@ spring:
     listener:
       acknowledge-mode: auto
   redis:
-    host: 10.9.19.61
-    password: huaxin123
+    host: 47.92.3.212
+    password: yunxin@2019
     port: 6379
     # redis共16片，使用0
     database: 0

@@ -2,6 +2,8 @@ package ${package}.${moduleName}.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * ${comments}
  *
@@ -10,4 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ${className}Service extends IService<${className}> {
 
+    IPage<${className}Vo> getPage(Query${className}Param param);
+
+    List<${className}Vo> getList(Query${className}Param param);
 }

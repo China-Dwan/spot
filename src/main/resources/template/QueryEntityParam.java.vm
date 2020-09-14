@@ -1,0 +1,15 @@
+package ${package}.${moduleName}.entity;
+
+import com.yunxin.psychology.dto.query.QueryBaseParam;
+import lombok.Data;
+
+/**
+ * ${comments}
+ *
+ * @author dzh
+ * @date ${datetime}
+ */
+@Data
+public class Query${className}Param extends QueryBaseParam {
+
+}

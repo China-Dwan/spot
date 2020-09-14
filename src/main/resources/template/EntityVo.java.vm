@@ -1,0 +1,24 @@
+package ${package}.${moduleName}.entity;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+#if(${hasBigDecimal})
+import java.math.BigDecimal;
+#end
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+/**
+ * ${comments}
+ *
+ * @author dzh
+ * @date ${datetime}
+ */
+@Data
+public class ${className}Vo implements Serializable {
+
+    #foreach ($column in $columns)
+    @ApiModelProperty(value="$column.comments"#if($column.hidden),hidden=$column.hidden#end)
+    private $column.attrType $column.lowerAttrName;
+    #end
+}

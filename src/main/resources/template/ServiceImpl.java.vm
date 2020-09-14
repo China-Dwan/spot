@@ -3,6 +3,8 @@ package ${package}.${moduleName}.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * ${comments}
  *
@@ -12,4 +14,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class ${className}ServiceImpl extends ServiceImpl<${className}Mapper, ${className}> implements ${className}Service {
 
+    @Override
+    public IPage<${className}Vo> getPage(Query${className}Param param) {
+        // 这里需要传入一个page对象
+        return baseMapper.getPage(null, param);
+    }
+
+    @Override
+    public List<${className}Vo> getList(Query${className}Param param) {
+        return baseMapper.getList(param);
+    }
 }
