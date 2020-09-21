@@ -2,6 +2,7 @@ package ${package}.${moduleName}.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import java.util.List;
 
@@ -23,5 +24,27 @@ public class ${className}ServiceImpl extends ServiceImpl<${className}Mapper, ${c
     @Override
     public List<${className}Vo> getList(Query${className}Param param) {
         return baseMapper.getList(param);
+    }
+
+    @Override
+    public Object update(${className} param) {
+        return baseMapper.updateById(param);
+    }
+
+    @Override
+    public Object updateBase(${className} param) {
+        this.checkAndGet(param.getId());
+
+        ${className} update = new ${className}();
+        update.setId(param.getId());
+        update.setStatus(param.getStatus());
+        update.setIsDel(param.getIsDel());
+        return baseMapper.updateById(update);
+    }
+
+    private ${className} checkAndGet(Long id) {
+        ${className} temp = baseMapper.selectById(id);
+        Assert.notNull(temp, "查询失败");
+        return temp;
     }
 }

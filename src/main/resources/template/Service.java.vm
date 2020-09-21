@@ -15,4 +15,8 @@ public interface ${className}Service extends IService<${className}> {
     IPage<${className}Vo> getPage(Query${className}Param param);
 
     List<${className}Vo> getList(Query${className}Param param);
+
+    Object updateOne(${className} param);
+
+    Object updateBase(${className} param);
 }

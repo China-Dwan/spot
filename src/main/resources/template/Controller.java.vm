@@ -22,28 +22,28 @@ public class ${className}Controller {
     @Resource
     private ${className}Service ${classname}Service;
 
-    @ApiOperation(value = "通过id查询", notes = "通过id查询")
-    @GetMapping("/getbyid/{${pk.lowerAttrName}}")
-    public CommonResult getById(@PathVariable("${pk.lowerAttrName}") ${pk.attrType} ${pk.lowerAttrName}) {
-        return CommonResult.success(${classname}Service.getById(${pk.lowerAttrName}));
+    @ApiOperation(value = "分页查询")
+    @PostMapping("/get-page")
+    public CommonResult getPage(@RequestBody Query${className}Param param) {
+        return CommonResult.success(${classname}Service.getPage(${pk.lowerAttrName}));
     }
 
-    @ApiOperation(value = "新增${comments}", notes = "新增${comments}")
-    @PostMapping(value = "/save")
-    public CommonResult save(@RequestBody ${className} ${classname}) {
-        return CommonResult.success(${classname}Service.save(${classname}));
+    @ApiOperation(value = "list查询")
+    @PostMapping(value = "/get-list")
+    public CommonResult getList(@RequestBody Query${className}Param param) {
+        return CommonResult.success(${classname}Service.getList(param));
     }
 
-    @ApiOperation(value = "修改${comments}", notes = "修改${comments}")
+    @ApiOperation(value = "修改")
     @PostMapping(value = "/update")
     public CommonResult updateById(@RequestBody ${className} ${classname}) {
-        return CommonResult.success(${classname}Service.updateById(${classname}));
+        return CommonResult.success(${classname}Service.updateOne(${classname}));
     }
 
-    @ApiOperation(value = "通过id删除${comments}", notes = "通过id删除${comments}")
-    @PostMapping("/deletebyid/{${pk.lowerAttrName}}")
-    public CommonResult removeById(@PathVariable("${pk.lowerAttrName}") ${pk.attrType} ${pk.lowerAttrName}) {
-        return CommonResult.success(${classname}Service.removeById(${pk.lowerAttrName}));
+    @ApiOperation(value = "修改")
+    @PostMapping(value = "/update-base")
+    public CommonResult updateById(@RequestBody ${className} ${classname}) {
+        return CommonResult.success(${classname}Service.updateBase(${classname}));
     }
 
 }
