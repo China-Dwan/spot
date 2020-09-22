@@ -27,7 +27,7 @@ public class ${className}ServiceImpl extends ServiceImpl<${className}Mapper, ${c
     }
 
     @Override
-    public Object update(${className} param) {
+    public Object updateOne(${className} param) {
         return baseMapper.updateById(param);
     }
 
