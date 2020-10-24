@@ -25,7 +25,7 @@ public class ${className}Controller {
     @ApiOperation(value = "分页查询")
     @PostMapping("/get-page")
     public CommonResult getPage(@RequestBody Query${className}Param param) {
-        return CommonResult.success(${classname}Service.getPage(${pk.lowerAttrName}));
+        return CommonResult.success(${classname}Service.getPage(param));
     }
 
     @ApiOperation(value = "list查询")
@@ -40,9 +40,9 @@ public class ${className}Controller {
         return CommonResult.success(${classname}Service.updateOne(${classname}));
     }
 
-    @ApiOperation(value = "修改")
+    @ApiOperation(value = "基础修改")
     @PostMapping(value = "/update-base")
-    public CommonResult updateById(@RequestBody ${className} ${classname}) {
+    public CommonResult updateBase(@RequestBody ${className} ${classname}) {
         return CommonResult.success(${classname}Service.updateBase(${classname}));
     }
 
