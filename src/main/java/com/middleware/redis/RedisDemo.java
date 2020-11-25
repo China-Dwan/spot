@@ -3,6 +3,7 @@ package com.middleware.redis;
 import org.springframework.data.redis.core.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import redis.clients.jedis.Jedis;
 
 import javax.annotation.Resource;
 import java.util.Set;
@@ -11,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 @RestController
 @RequestMapping("/guest/redis")
 public class RedisDemo {
+    private Jedis jedis = new Jedis("47.92.3.212", 6379);
 
     @Resource
     private RedisTemplate redisTemplate;
@@ -24,6 +26,16 @@ public class RedisDemo {
 //        this.testZSet();
         testStringss();
     }
+
+
+    private void testWatch() {
+        String watch = jedis.watch("");
+
+    }
+
+
+
+
 
     /**
      * 防止连点

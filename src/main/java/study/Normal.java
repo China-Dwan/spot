@@ -1,25 +1,36 @@
 package study;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
+import lombok.Data;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Normal {
 
-    public static void main(String[] args) {
+    @Data
+    static class N {
+        private long start;
+    }
 
-        JSONArray array = new JSONArray();
-        HashMap<String,Object> i = new HashMap<>();
-        i.put("type", 1);
-        i.put("url", "https://img.ciics.com/1600157523409.png");
-        array.add(i);
 
-        String s = "[{\"type\":1,\"url\":\"https://img.ciics.com/1600157523409.png\"}]";
-        System.out.println(array.toString());
+    public static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+
     }
 
     public static String getUUID() {

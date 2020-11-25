@@ -26,7 +26,7 @@ spring:
     password: yunxin@2019
     port: 6379
     # redis共16片，使用0
-    database: 0
+    database: 15
     timeout: 5000ms
     # springboot 2.X后版本支持lettuce，多线程安全
     lettuce:
@@ -65,9 +65,12 @@ mybatis-plus:
 admin:
   datasource:
     druid:
-      url: jdbc:mysql://wodiancai.com:3306/car?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+      #      url: jdbc:mysql://wodiancai.com:3306/car?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+      #      username: root
+      #      password: Yunxin@2019
+      url: jdbc:mysql://10.9.19.61:3306/b2b2c_6.0?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&zeroDateTimeBehavior=convertToNull
       username: root
-      password: Yunxin@2019
+      password: huaxincloud123
       driver-class-name: com.mysql.cj.jdbc.Driver
       initialSize: 5
       minIdle: 5
