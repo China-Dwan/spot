@@ -3,6 +3,7 @@ package study;
 import lombok.Data;
 
 import java.io.File;
+import java.math.BigDecimal;
 
 public class Normal {
 
@@ -30,7 +31,10 @@ public class Normal {
     }
 
     public static void main(String[] args) throws Exception {
-
+        BigDecimal zero = BigDecimal.ZERO;
+        zero = zero.subtract(BigDecimal.ONE).setScale(2);
+        System.out.println(zero);
+        System.out.println(System.nanoTime());
     }
 
     public static String getUUID() {

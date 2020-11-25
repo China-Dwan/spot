@@ -12,7 +12,7 @@ public class OrderDelayedVO implements Delayed {
     private String orderId;
 
     /**
-     * 订单创建时间的时间戳
+     * 订单创建时间的时间戳+订单未支付自动取消时间
      */
     private Long startTime;
 

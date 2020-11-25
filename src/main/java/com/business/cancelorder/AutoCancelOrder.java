@@ -20,18 +20,18 @@ public class AutoCancelOrder {
     @Resource
     private RedisTemplate<String, String> redisTemplate;
 
-    //保存需要取消的订单
+    // 保存需要取消的订单
     private final static DelayQueue<OrderDelayedVO> delayedQueue = new DelayQueue<>();
-    //是否开始标记
+    // 是否开始标记
     private boolean ifStart;
 
 
     @PostConstruct
     public void startCancelTask() {
-        //启动线程,执行取消订单业务
+        // 启动线程,执行取消订单业务
         this.start();
 
-        //读取redis中的遗留业务
+        // 读取redis中的遗留业务
         Map<Object, Object> cacheData = redisTemplate.opsForHash().entries(redisKey);
         cacheData.keySet().forEach(key -> {
             OrderDelayedVO order = JSON.parseObject(cacheData.get(key).toString(), OrderDelayedVO.class);
@@ -39,7 +39,7 @@ public class AutoCancelOrder {
                 return;
             }
 
-            //将订单信息加入Java队列
+            // 将订单信息加入Java队列
             this.add(order);
         });
     }
@@ -47,15 +47,26 @@ public class AutoCancelOrder {
 
     /**
      * 订单保存进延时队列及缓存
-     * @param order  需要处理的订单
+     *
+     * @param order 需要处理的订单
      */
-    private void add(OrderDelayedVO order) {
+    public void add(OrderDelayedVO order) {
         try {
             delayedQueue.put(order);
-            redisTemplate.opsForHash().put(redisKey,order.getOrderId(), JSON.toJSONString(order));
+            redisTemplate.opsForHash().put(redisKey, order.getOrderId(), JSON.toJSONString(order));
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 当订单支付成功后，删除延时队列订单及redis
+     *
+     * @param order
+     */
+    public void delete(OrderDelayedVO order) {
+        delayedQueue.remove(order);
+        redisTemplate.opsForHash().delete(redisKey, order.getOrderId());
     }
 
     /**
@@ -63,22 +74,20 @@ public class AutoCancelOrder {
      */
     private synchronized void start() {
         if (ifStart) {
-            //此时已启动
+            // 此时已启动
             return;
         }
         ifStart = true;
 
-        //创建线程池
+        // 创建线程池
         ThreadPoolExecutor threadPool = ThreadPoolUtil.getThreadPool();
         new Thread(() -> {
             while (true) {
                 try {
-                    //获取延迟队列中待取消的订单
+                    // 获取延迟队列中待取消的订单
                     OrderDelayedVO order = delayedQueue.take();
-
-                    //启动取消订单任务
+                    // 启动取消订单任务
                     threadPool.execute(() -> cancelOrder(order));
-
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -88,46 +97,44 @@ public class AutoCancelOrder {
 
     /**
      * 订单取消操作
+     *
      * @param order
      */
     private void cancelOrder(OrderDelayedVO order) {
-        //拼接redis锁
+        // 拼接redis锁
         String lockKey = String.format("%s%s", redisKey, order.getOrderId());
 
         try {
-            //保证只有一个服务器处理订单业务
+            // 保证只有一个服务器处理订单业务
             Boolean flag = redisTemplate.opsForValue().setIfAbsent(lockKey, order.getOrderId(), 60L, TimeUnit.SECONDS);
             if (Objects.nonNull(flag) && flag) {
                 String orderJson = (String) redisTemplate.opsForHash().get(redisKey, order.getOrderId());
                 if (StringUtils.isNotEmpty(orderJson)) {
-                    //此订单已经执行过取消订单操作
+                    // 此订单已经执行过取消订单操作
                     return;
                 }
 
-                //更新订单状态
+                // 更新订单状态
                 updateOrder(order);
 
-                //删除缓存中的订单信息
-                redisTemplate.opsForHash().delete(redisKey,order.getOrderId());
+                // 删除缓存中的订单信息
+                redisTemplate.opsForHash().delete(redisKey, order.getOrderId());
             }
         } catch (Exception e) {
             e.printStackTrace();
-            //这里做一个短信通知预警
+            // 这里做一个短信通知预警
         } finally {
-            //删除锁
+            // 删除锁
             redisTemplate.delete(lockKey);
         }
     }
 
     /**
      * 更新订单状态
+     *
      * @param order
      */
     private void updateOrder(OrderDelayedVO order) {
 
-    }
-
-    private void deleteOrderQueue(OrderDelayedVO order) {
-        delayedQueue.remove(order);
     }
 }
